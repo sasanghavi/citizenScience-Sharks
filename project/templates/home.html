@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Citizen Science - Home{% endblock %}
+{% block head_includes %}
+<script>
+	$(document).ready(function() {
+		changeContainer();
+		$(window).resize(changeContainer);
+	});
+
+	function changeContainer() {
+		document.getElementById('video-container').style.height = document.getElementById('homejumbo').clientHeight + 50;
+	}
+</script>
+{% endblock %}
+
+{% block content %}
+	<div id="homejumbo" class="jumbotron">
+		<div id="video-container">
+			<video class="fillWidth" preload="true" autoplay loop muted="muted" volume="0">
+				<source src="static/video/hugeshark.webm" type="video/webm">
+				<source src="static/video/hugeshark.mp4" type="video/mp4">
+				<source src="static/video/hugeshark.ogv" type="video/ogv">
+			</video>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<br>
+					<h1>Welcome to Citizen Science!</h1>
+					<h3>Everyone has the potential to be a scientist, and with Citizen Science we seek to help you do just that.<br>Collect fossils, measure them, and discover amazing sharks!</h3><br>
+					<p><a class="btn btn-primary btn-lg" href="/virtualdig" role="button">Start digging!</a></p>
+					<br><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>About Us</h2>
+				<p>Citizen Science is an initiative to enable everyone to participate in a scientific process.  We hope to empower you to become passionate about your interests and how science can benefit your pursuits.</p>
+				<p><a href="http://webclass.csc.ncsu.edu/p/course-projects.html#fall15" class="btn btn-default">Learn more &raquo;</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Sharks?!</h2>
+				<p>Yes, sharks!  There were ancient sharks that used to wander the oceans before going extinct.  Some of the best information we have about them is via their teeth, found in Aurora, NC.</p>
+				<p><a href="https://en.wikipedia.org/wiki/Shark" class="btn btn-default">Learn more &raquo;</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Contribute</h2>
+				<p>Are you a researcher, scientist, or archeologist with knowledge to contribute that will make this initiative more compelling and interesting?</p>
+				<p><a class="btn btn-default" href="http://webclass.csc.ncsu.edu/p/course-projects.html#fall15">Contact Us &raquo;</a></p>
+		</div>
+	</div>
+{% endblock %}
+</div>

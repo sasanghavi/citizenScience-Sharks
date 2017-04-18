@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Statistics{% endblock %}
+
+{%block head_includes %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+    <script src="/static/js/stats.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="stats" class="row">
+		<h1 style="text-align: center">Here's what you found!</h1>
+		<div class="col-sm-4">
+			<h3>Categories</h3>
+			<p>Teeth Found</p>
+			<!--p>Different Types of Teeth Found</p-->
+			<p>Largest Tooth Found</p>
+			<p>Smallest Tooth Found</p>
+		</div>
+		<div class="col-sm-4">
+			<h3>Your results</h3>
+			<p>15</p>
+			<!--p id="difftypes"></p-->
+			<p id="max"></p>
+			<p id="min"></p>
+		</div>
+		<div class="col-sm-4">
+			<h3>Overall results</h3>
+			<!--p>110</p-->
+			<p>110</p>
+			<p>15 millimeters</p>
+			<p>3 millimeters</p>
+		</div>
+	</div>
+	<br/>
+	<br/>
+
+    <div class="row" style="border: 1px black solid; padding: 2%;">
+    	<div class="col-sm-4">
+	    	<h4 style="text-align: center">Your teeth by Shark Type</h4>
+	        <canvas id="newChart" width="300" height="300"></canvas>
+    	</div>
+    	<div class="col-sm-7">
+    		<h4 style="text-align: center">Something to know about what you found!</h4>
+    		<table class="table table-hover">
+			    <thead>
+			      <tr>
+			        <th>Which shark?</th>
+			        <th>Something interesting about it!</th>
+			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td><a href="https://en.wikipedia.org/wiki/Lemon_shark" target="_blank">Lemon Shark</a></td>
+			        <td>They are yellow, which help them camouflage themselves against the sandy seafloor.</td>
+			        
+			      </tr>
+			      <tr>
+			        <td><a href="https://en.wikipedia.org/wiki/School_shark" target="_blank">Soupfin Shark</a></td>
+			        <td>They are also called School Sharks; they're Threatened because they have been overfished for food.</td>
+			        
+			      </tr>
+			      <tr>
+			        <td>Unidentified Shark</td>
+			        <td>These teeth are too worn down to be attributed to a specific shark.</td>
+			      </tr>
+			      <tr>
+			        <td><a href="https://en.wikipedia.org/wiki/Isurus_hastalis" target="_blank">Isurus Hastalis</a> <i>(Extinct)</i></td>
+			        <td>This shark lived between 56 million years ago and 11,700 years ago, but it is now extinct. It is a relative of the modern Mako shark.</td>
+			      </tr>
+			    </tbody>
+			</table>
+    	</div>
+    </div>   
+</br></br>
+
+    
+     <div class="row" style="border-bottom: 1px black solid; padding: 2%;">
+    	<div class="col-sm-5">
+			<h4 style="text-align: center">Teeth by Measurement Size (Counts)</h4>
+            <canvas id="myChart" width="400" height="300" auto-legend></canvas>
+    	</div>
+    	<div class="col-sm-2">
+    		<div id="legendDiv" class="chart-legend"></div>
+    	</div>
+    	<div class="col-sm-5">
+    		<h4 style="text-align: center">Teeth by Measurement Size (Percentages)</h4>
+            <canvas id="pChart" width="400" height="300" auto-legend></canvas>
+    	</div>
+    </div>
+{% endblock %}

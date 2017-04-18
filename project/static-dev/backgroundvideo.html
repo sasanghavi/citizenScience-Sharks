@@ -1,0 +1,90 @@
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- Latest compiled and minified JavaScript -->
+
+    <!-- IE HTML5 shim -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+    	$(document).ready(function() {
+    		changeContainer();
+    		$(window).resize(changeContainer);
+    	});
+
+    	function changeContainer() {
+    		document.getElementById('video-container').style.height = document.getElementById('homejumbo').clientHeight + 50;
+    	}
+    </script>
+  </head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Citizen Science</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/virtualdig">Virtual Dig!</a></li>
+					<li><a href="/measure">Measurement!</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<div id="homejumbo" class="jumbotron">
+		<div id="video-container">
+			<video class="fillWidth" preload="true" autoplay loop muted="muted" volume="0">
+				<source src="static/video/hugeshark.webm" type="video/webm">
+				<source src="static/video/hugeshark.mp4" type="video/mp4">
+				<source src="static/video/hugeshark.ogv" type="video/ogv">
+			</video>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<br>
+					<h1>Welcome to Citizen Science!</h1>
+					<h3>Everyone has the potential to be a scientist, and with Citizen Science we seek to help you do just that.<br>Collect fossils, measure them, and discover amazing sharks!</h3><br>
+					<p><a class="btn btn-primary btn-lg" href="/virtualdig" role="button">Start digging!</a></p>
+					<br><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>About Us</h2>
+				<p>Citizen Science is an initiative to enable everyone to participate in a scientific process.  We hope to empower you to become passionate about your interests and how science can benefit your pursuits.</p>
+				<p><a class="btn btn-default">Learn more &raquo;</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Sharks?!</h2>
+				<p>Yes, sharks!  There were ancient sharks that used to wander the oceans before going extinct.  Some of the best information we have about them is via their teeth, found in Aurora, NC.</p>
+				<p><a class="btn btn-default">Learn more &raquo;</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Contribute</h2>
+				<p>Are you a researcher, scientist, or archeologist with knowledge to contribute that will make this initiative more compelling and interesting?</p>
+				<p><a class="btn btn-default">Contact Us &raquo;</a></p>
+		</div>
+	</div>
+</body>
+</html>

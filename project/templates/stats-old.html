@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Statistics{% endblock %}
+
+{%block head_includes %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+    <script src="/static/js/stats.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="stats" class="row">
+		<h1>&nbsp;&nbsp;Compare your results to past results</h1>
+		<div class="col-sm-3">
+			<h3>Categories</h3>
+			<p>Teeth Found</p>
+			<p>Different Types of Teeth Found</p>
+			<p>Largest Tooth Found</p>
+			<p>Smallest Tooth Found</p>
+		</div>
+		<div class="col-sm-3">
+			<h3>Your results</h3>
+			<p>15</p>
+			<p id="difftypes"></p>
+			<p id="max"></p>
+			<p id="min"></p>
+		</div>
+		<div class="col-sm-3">
+			<h3>Overall results</h3>
+			<p>110</p>
+			<p>110</p>
+			<p>15 millimeters</p>
+			<p>3 millimeters</p>
+		</div>
+	</div>
+	<br/>
+	<br/>
+    <div class="row">
+    	<div class="col-sm-12">
+            <canvas id="myChart" width="800" height="400" auto-legend></canvas>
+            <div id="legendDiv" class="chart-legend"></div>
+    	</div>
+    </div>
+{% endblock %}

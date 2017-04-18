@@ -1,0 +1,210 @@
+/** GLOBAL **/
+body {
+	padding-top: 50px;
+}
+
+/** VIRTUALDIG **/
+div#digarea {
+	width: 3006px;
+	height: 5344px;
+	background-color: #333;
+	text-align: center;
+	overflow: auto;
+}
+
+#toggleResults {
+	position: fixed;
+	right: 2%;
+	top: 60px;
+	z-index: 10;
+}
+
+div#digresults {
+	position: fixed;
+	right: 0%;
+	top: 115px;
+	height: 80%;
+	width: 20%;
+	background: deepskyblue;
+	border: solid 3px;
+	border-radius: 5px;
+	overflow: auto;
+	z-index: 10;
+}
+
+div.tooth {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 5;
+}
+
+div#digresults > div {
+	float: left;
+	margin: 10px;
+}
+
+div#digresults > h1 {
+	text-align: center;
+	border: solid 2px;
+	border-radius: 5px;
+	background: dimgrey;
+	padding: 10px;
+}
+
+.measureDiv {
+	margin-top: 5%;
+	margin-left: 50px;
+	width: 100%;
+	float: left;
+	display: inline-block;
+}
+
+#sizeCircles {
+	border: solid 1px;
+	background: #00BFFF;
+	padding: 30px;
+}
+
+#toothContainer {
+	border: solid 1px;
+	padding: 20px;
+	background: #00BFFF;
+}
+
+#measureInstructions {
+	border: solid 1px;
+	padding: 20px;
+	background: #00BFFF;
+}
+
+/** HOMEPAGE **/
+/* http://benkaminski.com/2013/05/26/responsive-html5-css3-html5-video-background-in-div-no-javascript/ */
+#video-container {
+	position: absolute;
+}
+
+#video-container {
+	top:0%;
+	left:0%;
+	width:100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+video {
+	position:absolute;
+	z-index:0;
+}
+
+video.fillWidth {
+	width: 100%;
+}
+
+#homejumbo {
+	height: 60%;
+	color: #fff;
+	text-shadow: 1px 1px #333;
+}
+
+#homejumbo > div.container {
+	text-align: center;
+}
+
+#homejumbo h1 {
+	text-shadow: 2px 2px #333;
+}
+
+#homejumbo .btn-lg {
+	font-size: 28px;
+}
+
+/**MEASURE**/
+
+.measure {
+	border-radius: 50%; 
+	border: 1px solid black;
+	float: left;
+}
+
+#one {
+	 height: 10px; width: 10px;
+}
+
+#two {
+	 height: 20px; width: 20px;
+}
+
+#three {
+	 height: 30px; width: 30px;
+}
+
+#four {
+	 height: 40px; width: 40px;
+}
+
+#five {
+	 height: 50px; width: 50px;
+}
+
+#six {
+	 height: 60px; width: 60px;
+}
+
+#seven {
+	 height: 70px; width: 70px;
+}
+
+#eight {
+	 height: 80px; width: 80px;
+}
+
+#nine {
+	 height: 90px; width: 90px;
+}
+
+#ten {
+	 height: 100px; width: 100px;
+}
+
+#eleven {
+	 height: 110px; width: 110px;
+}
+
+#twelve {
+	 height: 120px; width: 120px;
+}
+
+#thirteen {
+	 height: 130px; width: 130px;
+}
+
+#fourteen {
+	 height: 140px; width: 140px;
+}
+
+#fifteen {
+	 height: 150px; width: 150px;
+}
+
+#measureButton {
+	float: left;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}
+
+.chart-legend li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
